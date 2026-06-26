@@ -1,0 +1,56 @@
+body{
+    background-color: aqua;
+}
+
+#formDel{
+    margin-top: -40px;
+    margin-left: 62vw;
+    display: none;
+}
+
+#btnDel{
+    margin-left: 350px;
+    margin-top: -38px;
+    position: absolute;
+    width: 220px;
+}
+
+button{
+    background-color: rgb(130, 194, 114);
+}
+
+button:hover{
+    background-color: rgb(73, 196, 69);
+}
+
+#show{
+    position: fixed;
+    margin-left: 62vw;
+    margin-top: 10px;
+    background-color: bisque;
+    border: 1px solid red;
+    height: 30px;
+}
+
+#showForDel{
+    visibility: hidden;
+    position: fixed;
+}
+
+#por1{
+    margin-top: 2px;
+    position: sticky;
+}
+
+#emailDel{
+    margin-top: 15px;
+}
+
+body:has(#showForDel:checked) #formDel{
+    position: fixed;
+    display: inline;
+    background-color: bisque;
+    width: 570px;
+    height: 50px;
+    margin-top: 44px;
+}

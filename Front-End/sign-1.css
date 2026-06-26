@@ -1,0 +1,26 @@
+#formOtp{
+    text-align: center;
+    margin-top: 200px;
+    background-color: aquamarine;
+    width: 200px;
+    height: 100px;
+    margin-left: 42vw;
+}
+
+#otp{
+    margin-top: 30px;
+}
+
+#btnOtp{
+    background-color: rgb(130, 194, 114);
+}
+
+#btnOtp:hover{
+    background-color: rgb(73, 196, 69);
+}
+
+body{
+    align-content: center;
+    text-align: center;
+    background-color: aqua;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign.css">
+    <script src="sign.js" defer></script>
+</head>
+<body>
+    <form id="form1">
+        <input type="email" placeholder="Enter your signup email" id="email1" required>
+        <input type="password" placeholder="Enter your password" id="password1" required>
+        <button type="submit" id="btn1">Signup</button>
+        <p id="p1"></p>
+    </form>
+    <div id="showlogin">
+    <input type="checkbox" id="ShowLog">
+    <label for="ShowLog" id="showlogin3"><h3 id="showlogin2">Show login form</h3></label>
+    </div>
+    <div id="combined">
+    <form id="form2">
+        <input type="email" placeholder="Enter your email to login" id="email2" required>
+        <input type="password" placeholder="Enter your password" id="password2" required>
+        <button type="submit" id="btn2">Login</button>
+        <p id="p22"></p>
+    </form>
+    <form id="formUp">
+        <input type="email" placeholder="Enter your email to continue" id="emailUp" required>
+        <button type="submit" id="btnUp">Forgot password</button>
+        <p id="forUp"></p>
+    </form>
+    <div id="showfor">
+        <input type="checkbox" id="checkfor">
+        <label for="checkfor"><h3 id="p2">Forgot Password</h3></label>
+    </div>
+    </div>
+    <h1>You can try functions of our site here, note this a site for todo-list</h1>
+    <input type="text" placeholder="Enter any task you need to do later" id="task"> <button type="button" id="btnScreen">Add</button>
+    <ul id="ul"></ul>
+</body>
+</html>
