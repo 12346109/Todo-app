@@ -455,7 +455,9 @@ app.patch('/changePass', async function (req, res) {
     }
 })
 
-app.listen(process.env.PORT, function (err) {
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, function (err) {
     if (err) {
         console.log('Failed to start server', err)
     } else {
