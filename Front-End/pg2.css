@@ -54,3 +54,13 @@ body:has(#showForDel:checked) #formDel{
     height: 50px;
     margin-top: 44px;
 }
+
+@media (max-height:768px) {
+    #show{
+        margin-left: 320px;
+        margin-top: -40px;
+    }
+    #wel{
+        font-size: 20px;
+    }
+}
