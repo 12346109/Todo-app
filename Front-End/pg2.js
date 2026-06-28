@@ -1,7 +1,7 @@
 const ul = document.getElementById('ul');
 const task = document.getElementById('task');
 const btnTask = document.getElementById('btnTask');
-const address = `https://tiny-belle-consolidation-foto.trycloudflare.com/pg2.html`;
+const address = `https://tiny-belle-consolidation-foto.trycloudflare.com`;
 btnTask.addEventListener('click', async function() {
     try{
         const li = document.createElement('li');
