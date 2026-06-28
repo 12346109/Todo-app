@@ -12,7 +12,8 @@ btnTask.addEventListener('click', async function() {
         await li.appendChild(delBtn);
         const taskIn = task.value;
         if(taskIn === ''){
-            taskIn.textContent = 'Write something to add'
+            task.placeholder = 'Write something to add';
+            return;
         }
         else{
         span.textContent = taskIn;
