@@ -57,6 +57,7 @@ body:has(#showForDel:checked) #formDel{
 
 @media (max-width:768px) {
     #show{
+        display: inline-block;
         margin-left: 20px;
         margin-top: -40px;
         position: relative;
