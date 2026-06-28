@@ -58,8 +58,8 @@ body:has(#showForDel:checked) #formDel{
 @media (max-width:768px) {
     #show{
         display: inline-block;
-        margin-left: 20px;
-        margin-top: -40px;
+        margin-left: 0px;
+        margin-top: 40px;
         position: relative;
         background-color: bisque;
     }
@@ -72,9 +72,7 @@ body:has(#showForDel:checked) #formDel{
         font-size: 20px;
     }
     #formDel{
-        margin-left: -9px;
-        margin-top: -40px;
-        position: absolute;
+        display: none;
     }
     #emailDel{
         width: 130px;
@@ -86,4 +84,9 @@ body:has(#showForDel:checked) #formDel{
         width: 220px;
         margin-left: 280px;
     }
+    body:has(#showForDel:checked) #formDel{
+        transform: translateY(30px);
+        margin-left: -165px;
+        width: 503px;
+}
 }
