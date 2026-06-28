@@ -14,7 +14,7 @@ const { type } = require('os');
 app.use(express.static(path.join(__dirname, '..', 'Front-End')))
 app.use(cookie());
 app.use(express.json());
-app.use(cors({ origin: ['http://127.0.0.1:5501', 'http://localhost:5501', 'http://localhost:3001', 'http://127.0.0.1:3001'], credentials: true }));
+app.use(cors({ origin: ['http://127.0.0.1:5501', 'http://localhost:5501', 'http://localhost:3001', 'http://127.0.0.1:3001', 'https://todo-lists111.netlify.app'], credentials: true }));
 require('dotenv').config();
 const connectDb = async function () {
     try {
