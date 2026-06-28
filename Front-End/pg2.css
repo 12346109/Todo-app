@@ -88,7 +88,7 @@ body:has(#showForDel:checked) #formDel{
     body:has(#showForDel:checked) #formDel{
         transform: translateY(30px);
         margin-left: -200px;
-        width: 350px;
+        width: 200px;
         height: 120px;
 }
 }
