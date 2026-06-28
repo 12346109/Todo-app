@@ -11,8 +11,8 @@
 </head>
 <body>
     <form id="form1">
-        <input type="email" placeholder="Enter your signup email" id="email1" required>
-        <input type="password" placeholder="Enter your password" id="password1" required>
+        <input type="email" placeholder="Enter your signup email" id="email1" required autocomplete="email">
+        <input type="password" placeholder="Enter your password" id="password1" required autocomplete="new-password">
         <button type="submit" id="btn1">Signup</button>
         <p id="p1"></p>
     </form>
@@ -22,13 +22,13 @@
     </div>
     <div id="combined">
     <form id="form2">
-        <input type="email" placeholder="Enter your email to login" id="email2" required>
-        <input type="password" placeholder="Enter your password" id="password2" required>
+        <input type="email" placeholder="Enter your email to login" id="email2" required autocomplete="username">
+        <input type="password" placeholder="Enter your password" id="password2" required autocomplete="current-password">
         <button type="submit" id="btn2">Login</button>
         <p id="p22"></p>
     </form>
     <form id="formUp">
-        <input type="email" placeholder="Enter your email to continue" id="emailUp" required>
+        <input type="email" placeholder="Enter your email to continue" id="emailUp" required autocomplete="email">
         <button type="submit" id="btnUp">Forgot password</button>
         <p id="forUp"></p>
     </form>
