@@ -60,11 +60,29 @@ body:has(#showForDel:checked) #formDel{
         margin-left: 20px;
         margin-top: -40px;
         position: relative;
+        background-color: bisque;
     }
+
+    #showForDel{
+        visibility: hidden;
+    }
+
     #wel{
         font-size: 20px;
     }
     #formDel{
-        margin-left: -50px;
+        margin-left: -9px;
+        margin-top: -40px;
+        position: absolute;
+    }
+    #emailDel{
+        width: 130px;
+    }
+    #passwordDel{
+        width: 130px;
+    }
+    #btnDel{
+        width: 220px;
+        margin-left: 280px;
     }
 }
