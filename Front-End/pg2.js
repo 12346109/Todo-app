@@ -15,7 +15,6 @@ btnTask.addEventListener('click', async function() {
             task.placeholder = 'Write something to add';
             return;
         }
-        else{
         span.textContent = taskIn;
         delBtn.textContent = 'Delete your task';
         li.style.backgroundColor = 'lightblue';
@@ -38,7 +37,6 @@ btnTask.addEventListener('click', async function() {
             ul.removeChild(li)
             console.log('Successfully deleted the task from the database');
         })
-    }
     }catch(err){
         console.log(err)
     }
