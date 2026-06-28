@@ -82,13 +82,13 @@ body:has(#showForDel:checked) #formDel{
     }
     #btnDel{
         width: 220px;
-        margin-left: 0px;
+        margin-left: 30px;
         margin-top: 10px;
     }
     body:has(#showForDel:checked) #formDel{
         transform: translateY(30px);
         margin-left: -200px;
-        width: 480px;
-        height: 100px;
+        width: 350px;
+        height: 120px;
 }
 }
