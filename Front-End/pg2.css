@@ -89,6 +89,6 @@ body:has(#showForDel:checked) #formDel{
         transform: translateY(30px);
         margin-left: -200px;
         width: 480px;
-        height: auto;
+        height: 100px;
 }
 }
