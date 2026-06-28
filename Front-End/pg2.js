@@ -4,17 +4,17 @@ const btnTask = document.getElementById('btnTask');
 const address = `https://tiny-belle-consolidation-foto.trycloudflare.com`;
 btnTask.addEventListener('click', async function() {
     try{
+        const taskIn = task.value;
+        if(taskIn === ''){
+            task.placeholder = 'Write something to add';
+            return;
+        }
         const li = document.createElement('li');
         const span = document.createElement('span');
         const delBtn = document.createElement('button');
         await ul.appendChild(li);
         await li.appendChild(span);
         await li.appendChild(delBtn);
-        const taskIn = task.value;
-        if(taskIn === ''){
-            task.placeholder = 'Write something to add';
-            return;
-        }
         span.textContent = taskIn;
         delBtn.textContent = 'Delete your task';
         li.style.backgroundColor = 'lightblue';
