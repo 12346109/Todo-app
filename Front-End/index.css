@@ -176,8 +176,7 @@ button:hover{
         grid-template-columns: 1fr;
         width: 95%;
         max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 70px;
         gap: 8px;
         position: absolute;
     }
@@ -189,10 +188,10 @@ button:hover{
 
     #showfor{
         position: absolute;
-        margin-top: 140px;
+        margin-top: 110px;
         margin-left: auto;
         margin-right: auto;
-        width: 150px;
+        width: 100px;
     }
 
     #showlogin{
