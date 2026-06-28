@@ -17,7 +17,7 @@ formOtp.addEventListener('submit', async function(e) {
     if(resOfSend.message === 'User verified successfully'){
         console.log(resOfSend.message);
         localStorage.removeItem('email1')
-        window.location.href = 'sign.html';
+        window.location.href = 'index.html';
         return;
     } else{
         console.log(resOfSend.message);

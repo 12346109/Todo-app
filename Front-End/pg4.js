@@ -19,7 +19,7 @@ form1.addEventListener('submit', async function(e) {
     p24.textContent = resOfDel.message
     if(resOfDel.message === 'Successfully deleted the user account'){
         localStorage.removeItem('email');
-        window.location.href = 'sign.html';
+        window.location.href = 'index.html';
         return;
     } else{
         p24.textContent = resOfDel.message;

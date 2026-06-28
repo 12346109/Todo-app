@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', async function(){
         const data = await fetchData.json();
         if(data.foundToken === false){
             console.log('user is not authenticated');
-            window.location.href = 'sign.html';
+            window.location.href = 'index.html';
             return;
         } else{
             console.log('Welcome user');
@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', async function(){
             })
         } else{
                 console.log("Failed to load tasks collection safely.");
-                window.location.href = 'sign.html';
+                window.location.href = 'index.html';
             return;
         }}
     }catch(err){
@@ -103,7 +103,7 @@ logout.addEventListener('click', async function() {
     })
     if(fetchLog.ok){
         console.log('Successfully logged out')
-        window.location.href = 'sign.html';
+        window.location.href = 'index.html';
     } else{
         console.log('Failed to logout');
     }    

@@ -19,7 +19,7 @@ form1.addEventListener('submit', async function(e) {
     if(resOfOtp.message === 'Password reset successfully'){
         console.log('Password reset successfully');
         localStorage.removeItem('emailFor')
-        window.location.href = 'sign.html';
+        window.location.href = 'index.html';
     } else{
         console.log('User entered incorrect otp');
         p.textContent = resOfOtp.message;
