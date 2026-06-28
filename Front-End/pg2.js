@@ -1,6 +1,7 @@
 const ul = document.getElementById('ul');
 const task = document.getElementById('task');
 const btnTask = document.getElementById('btnTask');
+const address = `https://tiny-belle-consolidation-foto.trycloudflare.com/pg2.html`;
 btnTask.addEventListener('click', async function() {
     try{
         const li = document.createElement('li');
@@ -14,7 +15,7 @@ btnTask.addEventListener('click', async function() {
         delBtn.textContent = 'Delete your task';
         li.style.backgroundColor = 'lightblue';
         li.style.width = 'fit-content';
-        const saveTaskToDatabase = await fetch('/todos', {
+        const saveTaskToDatabase = await fetch(`${address}/todos`, {
             method:'POST',
             headers:{ 'content-type':'application/json' },
             credentials:'include',
@@ -24,7 +25,7 @@ btnTask.addEventListener('click', async function() {
         const taskId = saveTaskId.task._id;
         console.log('Task is successfully saved to the database')
         delBtn.addEventListener('click', async function(){
-            const fetchRes = await fetch(`/deleteTodo/${taskId}`, {
+            const fetchRes = await fetch(`${address}/deleteTodo/${taskId}`, {
                 method:'DELETE',
                 credentials:'include'
             })
@@ -41,7 +42,7 @@ btnTask.addEventListener('click', async function() {
 
 window.addEventListener('DOMContentLoaded', async function(){
     try{
-        const fetchData = await fetch('/user',{
+        const fetchData = await fetch(`${address}/user`,{
             method:'GET',
             credentials:'include'
         })
@@ -52,7 +53,7 @@ window.addEventListener('DOMContentLoaded', async function(){
             return;
         } else{
             console.log('Welcome user');
-            const fetchData2 = await fetch('/savedTodos', {
+            const fetchData2 = await fetch(`${address}/savedTodos`, {
                 method:'GET',
                 credentials:'include'
             })
@@ -71,7 +72,7 @@ window.addEventListener('DOMContentLoaded', async function(){
             li.style.backgroundColor = 'lightblue';
             li.style.width = 'fit-content';
             delBtn.addEventListener('click', async function() {
-                const delRes2 = await fetch(`/deleteTodo/${items._id}`, {
+                const delRes2 = await fetch(`${address}/deleteTodo/${items._id}`, {
                     method:'DELETE',
                     credentials:'include'
                 })
@@ -96,7 +97,7 @@ window.addEventListener('DOMContentLoaded', async function(){
 
 const logout = document.getElementById('logOut');
 logout.addEventListener('click', async function() {
-    const fetchLog = await fetch('logOut',{
+    const fetchLog = await fetch(`${address}/logOut`,{
         method:'POST',
         credentials:'include'
     })
@@ -116,7 +117,7 @@ formDel.addEventListener('submit', async function(e){
     e.preventDefault();
     const emailDelIn = emailDel.value;
     const passwordDelIn = passwordDel.value;
-    const otpRes = await fetch('/delUser', {
+    const otpRes = await fetch(`${address}/delUser`, {
         method:'DELETE',
         headers:{ 'content-type':'application/json' },
         credentials:'include',

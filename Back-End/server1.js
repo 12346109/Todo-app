@@ -24,7 +24,7 @@ const connectDb = async function () {
         console.log('Failed to connect to MongoDb', err)
     }
 }
-connectDb();
+connectDb();cs
 const userZ = z.object({
     email: z.string().email({ message: 'Invalid email format' }),
     password: z.string().min(6, { message: 'Password must be upto 6 characters' })
