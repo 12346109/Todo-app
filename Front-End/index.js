@@ -2,7 +2,8 @@ const form1 = document.getElementById('form1');
 const email1 = document.getElementById('email1');
 const password1 = document.getElementById('password1');
 const p1 = document.getElementById('p1');
-const address = `https://tiny-belle-consolidation-foto.trycloudflare.com`;
+const loginBtn = document.getElementById('btn2');
+const address = 'https://memorial-connectivity-parade-reno.trycloudflare.com';
 form1.addEventListener('submit', async function(e){
     e.preventDefault();
     const email1In = email1.value;
@@ -27,11 +28,13 @@ const form2 = document.getElementById('form2');
 const email2 = document.getElementById('email2');
 const password2 = document.getElementById('password2');
 const p22 = document.getElementById('p22')
+let loading;
 form2.addEventListener('submit', async function(e) {
     try{
         e.preventDefault();
         const email2In = email2.value;
         const password2In = password2.value;
+        loading = true;
         const form2Res = await fetch(`${address}/login`, {
             method:'POST',
             headers:{ 'content-type':'application/json' },
@@ -44,6 +47,12 @@ form2.addEventListener('submit', async function(e) {
         if(data3 === 'Login successful'){
             window.location.href = 'pg2.html';
         } else{
+            if(data3 == 'User is unverified'){
+                console.log('User is unverified');
+                p22.textContent = 'User is unverified';
+                p22.style.marginTop = '-18px'
+                return;
+            }
             console.log('User entered invalid credentials');
             p22.textContent = 'User entered invalid credentials';
             p22.style.marginTop = '-18px'
@@ -51,6 +60,8 @@ form2.addEventListener('submit', async function(e) {
         }
     }catch(err){
         console.log(err);
+    } finally{
+        loading = false;
     }
 })
 
