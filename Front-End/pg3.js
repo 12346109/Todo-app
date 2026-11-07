@@ -3,7 +3,7 @@ const email1 = localStorage.getItem('emailFor');
 const password1 = document.getElementById('passwordNew');
 const otp1 = document.getElementById('otp');
 const p = document.getElementById('otp2');
-const address = 'https://calm-arguments-powerful-malpractice.trycloudflare.com';
+const address = 'https://bundle-sku-websites-administrative.trycloudflare.com';
 form1.addEventListener('submit', async function(e) {
     e.preventDefault();
     const password1In = password1.value;

